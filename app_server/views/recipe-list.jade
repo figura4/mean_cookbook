@@ -17,7 +17,7 @@ block content
           small &nbsp;
            +outputRating(recipe.rating)
           span.badge.pull-right.badge-default tradizionale
-        p.address pasta alla carbonara
+        p.address= recipe.description
         p
           each tag in recipe.tags
             span.label.label-warning= tag
