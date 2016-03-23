@@ -1,8 +1,8 @@
-require('./locations');
+require('./recipes');
 
 var mongoose = require( 'mongoose' );
 var gracefulShutdown;
-var dbURI = 'mongodb://localhost/Loc8r';
+var dbURI = 'mongodb://localhost/mean_cookbook';
 mongoose.connect(dbURI);
 mongoose.connection.on('connected', function () {
 console.log('Mongoose connected to ' + dbURI);
