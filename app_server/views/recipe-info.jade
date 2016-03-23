@@ -1,28 +1,25 @@
+include _includes/sharedHTMLfunctions
+
 extends layout
 block content
   .row.page-header
     .col-lg-12
-      h1 Carbonara
+      h1= pageHeader.title
   .row
     .col-xs-12.col-md-9
       .row
         .col-xs-12.col-sm-6
-          p.rating
-            span.glyphicon.glyphicon-star
-            span.glyphicon.glyphicon-star
-            span.glyphicon.glyphicon-star
-            span.glyphicon.glyphicon-star-empty
-            span.glyphicon.glyphicon-star-empty
-          p Pasta alla carbonara
+          +outputRating(recipe.rating)
+          p= recipe.description
           .panel.panel-primary
             .panel-heading
               h2.panel-title Ingredienti
             .panel-body
-              p Porcello
-              p Uova
-              p Pasta
+              each ingredient in recipe.ingredients
+                p= ingredient.quantity  + ingredient.measure + ' ' + ingredient.name
+
   .row
     .col-xs-12
       ol
-        li prendere a calci il porcello
-        li rompere le uova
+        each step in recipe.steps
+          li= step
