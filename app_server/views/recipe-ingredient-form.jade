@@ -1,0 +1,27 @@
+extends layout
+block content
+  .row.page-header
+    .col-lg-12
+      h1 Aggiungi ingrediente per carbonara
+  .row
+    .col-xs-12.col-md-6
+      form.form-horizontal(action="/location", method="get", role="form")
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="ingredient") Ingrediente
+          .col-xs-12.col-sm-10
+            input#name.form-control(name="ingredient")
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="quantyty") Quantita
+          .col-xs-12.col-sm-10
+            input#name.form-control(name="quantyty")
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="misura") Misura
+          .col-xs-12.col-sm-2
+            select#rating.form-control.input-sm(name="misura")
+              option teaspoon
+              option Kg
+              option Hg
+              option l
+              option cl
+        button.btn.btn-default.pull-right Aggiungi ingrediente
+    .col-xs-12.col-md-4

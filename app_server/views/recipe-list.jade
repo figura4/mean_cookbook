@@ -1,0 +1,47 @@
+extends layout
+
+block content
+  #banner.page-header
+    .row
+      .col-lg-6
+        h1 Mean cookbook
+          small &nbsp;Find recipes for you!
+
+  .row.list-group
+    .col-xs-12.list-group-item
+      h4
+        a(href="/recipe") Carbonara
+        small &nbsp;
+          span.glyphicon.glyphicon-star
+          span.glyphicon.glyphicon-star
+          span.glyphicon.glyphicon-star
+          span.glyphicon.glyphicon-star-empty
+          span.glyphicon.glyphicon-star-empty
+        span.badge.pull-right.badge-default tradizionale
+      p.address pasta alla carbonara
+      p
+        span.label.label-warning Porcello
+        &nbsp;
+        span.label.label-warning Primo
+        &nbsp;
+        span.label.label-warning Pasta
+        &nbsp;
+  
+    .col-xs-12.list-group-item
+      h4
+        a(href="/recipe") Puttanesca
+        small &nbsp;
+          span.glyphicon.glyphicon-star
+          span.glyphicon.glyphicon-star
+          span.glyphicon.glyphicon-star-empty
+          span.glyphicon.glyphicon-star-empty
+          span.glyphicon.glyphicon-star-empty
+        span.badge.pull-right.badge-default tradizionale
+      p.address pasta alla puttanesca
+      p
+        span.label.label-warning No porcello
+        &nbsp;
+        span.label.label-warning Primo
+        &nbsp;
+        span.label.label-warning Pasta
+        &nbsp;
